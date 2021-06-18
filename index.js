@@ -217,8 +217,8 @@ const cuboid = new CuboidMaker ({
 class CuboidMakerTwo{
   constructor (object){
     this.length = object.length;
-    this.width = object.width;
-    this.heigth = object.height;
+  this.width = object.width;
+  this.height = object.height;
   }
   volume (){
     return this.length * this.width * this.height;
