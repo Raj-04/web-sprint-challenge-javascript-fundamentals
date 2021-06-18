@@ -60,32 +60,43 @@ const zooAnimals = [
   Use animalNames to populate and return the displayNames array with only the animal name and scientific name of each animal. 
   displayNames will be an array of strings, and each string should follow this pattern: "name: {name}, scientific: {scientific name}"
   */
-
-  function animalNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
   
+  function animalNames(item){
+    /*Your Code Here*/
+    let displayNames = [];
+    return displayNames.push(`name: ${item.animal_name}, scientific: ${item.scientific_name}`)
+  }
+    // const animalNames = [];
 
+    // zooAnimals.forEach(function(item){
+    //   return animalNames.push(`"name: ${item.animal_name}, scientific: ${item.scientific_name}`);
+    // });
+
+      console.log('request1', animalNames);
   /* 🦁🦁🦁 Request 2: .map() 🦁🦁🦁
   The zoo needs a list of all their animal's names converted to lower case. 
   Using lowerCaseNames use .map() to create a new array of strings with the animal's names in lowercase and return the new array. 
   For example: ['jackal, asiatic', .....]
   */
 
-  function lowerCaseNames(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+  // function lowerCaseNames(/*Your Code Here*/){
+  //   /*Your Code Here*/
+  // }
+  let lowerCaseNames = zooAnimals.map((animal) =>
+animal.animal_name.toLowerCase());
+console.log('Request 2',lowerCaseNames);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
   The zoo is concerned about animals with a lower population count. 
   Using lowPopulationAnimals use .filter() to create a new array of objects which contains only the animals with a population of less than 5.
   */
 
-  function lowPopulationAnimals(/*Your Code Here*/){
-    /*Your Code Here*/
-  }
-  
+  // function lowPopulationAnimals(/*Your Code Here*/){
+  //   /*Your Code Here*/
+  // }
+  const lowPopulationAnimals = zooAnimals.filter(zooAnimals => zooAnimals.population < 5);
+
+  console.log('Request3', lowPopulationAnimals);
 
   /* 🦁🦁🦁 Request 4: .reduce() 🦁🦁🦁
   The zoo needs to know their total animal population across the United States. 
@@ -106,9 +117,10 @@ const zooAnimals = [
     * The consume function should return the invocation of cb, passing a and b into cb as arguments
   */
 
-  function consume(/*Your Code Here */){
+  function consume(a, b, cb){
     /*Your Code Here */
-  }
+    return cb(a,b);
+  };
  
   
   /* 🦁🦁🦁 Step 2: Create several functions to callback with consume(); 🦁🦁🦁 */
