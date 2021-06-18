@@ -63,13 +63,10 @@ const zooAnimals = [
   
  
     const animalNames = [];
-
-    zooAnimals.forEach(function(object){
-      return animalNames.push(`name: ${object.animal_name}, scientific: ${object.scientific_name}`);
+    zooAnimals.forEach(object =>{
+       animalNames.push(`name: ${object.animal_name}, scientific: ${object.scientific_name}`);
     });
-
-    
-      console.log('request1', animalNames);
+    console.log('request1', animalNames);
 
   
 
@@ -83,8 +80,7 @@ const zooAnimals = [
   // function lowerCaseNames(/*Your Code Here*/){
   //   /*Your Code Here*/
   // }
-  let lowerCaseNames = zooAnimals.map((animal) =>
-animal.animal_name.toLowerCase());
+  const lowerCaseNames = zooAnimals.map((animal) =>animal.animal_name.toLowerCase());
 console.log('Request 2',lowerCaseNames);
   
   /* 🦁🦁🦁 Request 3: .filter() 🦁🦁🦁
@@ -109,7 +105,7 @@ console.log('Request 2',lowerCaseNames);
   //   /*Your Code Here*/
   // }
   const USApop = zooAnimals.reduce(function(accumulator, item){
-    return accumulator + item.population}, 0);
+    return (accumulator) + (item.population)},0);
   console.log('request4', USApop);
   
   // 🦁🦁🦁 Callbacks 🦁🦁🦁  
