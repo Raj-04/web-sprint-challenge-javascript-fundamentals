@@ -16,7 +16,7 @@ function myFunction() {
 myFunction();
 
 //🚀🚀🚀 ⬇️ 📝 Explanation ⬇️ 📝 🚀🚀🚀: 
-
+ // This is called a Javascript Closure. It makes it possible for a function to have "Private variables".A closure is a function having access to the parent scope, even after the parent function has been closed.
 
 
 
